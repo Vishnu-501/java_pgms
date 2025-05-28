@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(){
+ int a[5];//declaration
+ int size=sizeof(a)/sizeof(a[0]);//size of array
+ printf("size of array  a:%d\n",size);
+ 
+ //initialization dynamically
+ for(int i=0;i<size;i++){
+     printf("Enter a[%d] value: ",i);
+     scanf("%d",&a[i]);
+ }
+ printf("-------------------------\n");
+ //printing elements
+ for(int j=0;j<size;j++){
+     printf("a[%d] is %d  \n",j,a[j]);
+ }
+ printf("-------------------------\n");
+  // First highest value in given array
+
+ int highest=a[0];
+ for(int i=0;i<size;i++){
+     if(a[i]>highest){
+         highest=a[i];
+     }
+ }
+ printf("highest is %d\n",highest);
+
+  // First lowest value in given array
+ int lowest=a[0];
+ for(int i=0;i<size;i++){
+     if(a[i]<lowest){
+         lowest=a[i];
+     }
+ }
+ printf("lowest is %d\n",lowest);
+}
